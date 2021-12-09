@@ -96,6 +96,7 @@ class eppResponse extends \DOMDocument {
     public function __destruct() {
     }
 
+    #[\ReturnTypeWillChange]
     public function findNamespace($namespace) {
         if (!is_null($this->xpathuri)) {
             if (is_array($this->xpathuri)) {
