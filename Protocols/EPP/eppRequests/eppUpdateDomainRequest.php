@@ -95,7 +95,7 @@ class eppUpdateDomainRequest extends eppDomainRequest {
                 $this->addDomainStatus($element, $status);
             }
         }
-        if (strlen($domain->getAuthorisationCode())) {
+        if (strlen($domain->getAuthorisationCode() ?? '')) {
             $authinfo = $this->createElement('domain:authInfo');
             if ($this->useCdata()) {
                 $pw = $this->createElement('domain:pw');
